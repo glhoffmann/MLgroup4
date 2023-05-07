@@ -46,7 +46,7 @@ data = np.array([x[1:] for x in d])
 num_clusters = [3, 5, 10, 15, 20, 25]
 
 for num in num_clusters:
-    kmeans = KMeans(n_clusters=num, assign_labels="discretize", random_state=0, n_init=10).fit(data)
+    kmeans = KMeans(n_clusters = num, n_init = 10, random_state = 0).fit(data)
     cluster_labels = []
 
     with open(f"results_{num}_k_clusters.txt", "w") as f:
